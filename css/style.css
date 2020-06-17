@@ -1,0 +1,237 @@
+/*─▄█████▄────────────────────────────────────
+ ──███▄██▀─────────────────────────────────────
+ ─▐█████────█────█────█────█────█────█────█────
+ ──██████▄─────────────────────────────────────
+ ───▀█████▀────────────────────────────────────
+ ────Lo hemos intentado muy fuerte-muy fuerte──*/
+
+
+/*----------GLOBAL---------*/
+* {
+    margin: 0;
+    padding: 0;
+    cursor: initial !important;
+}
+
+@font-face {
+    font-family: 'pacfontregular';
+    src: url('../fonts/pac-font-webfont.woff2') format('woff2'),
+        url('../fonts/pac-font-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    background-color: black;
+}
+
+.pixel-letter {
+    color: yellow;
+    font-size: 1.5em;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.letter {
+    color: yellow;
+    font-size: 2.2em;
+    font-family: 'pacfontregular';
+}
+
+.notDisplayed {
+    display: none !important
+}
+
+/*----------PANTALLA INICIO---------*/
+
+.pantalla-inicio button {
+    padding: 55px 95px;
+    margin: 70px 0;
+    box-shadow: 10px 10px #888888;
+}
+
+svg {
+    color: white;
+}
+
+.blink {
+    animation: blinker 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: .4;
+    }
+}
+
+
+/*----------PANTALLA CARGA ---------*/
+
+.pantalla-carga {
+    display: none;
+}
+
+#logo-juego {
+    stroke-width: 1;
+    stroke: yellow;
+    fill: transparent;
+    width: 80%;
+    margin: 120px 200px;
+}
+
+.show-names {
+    animation: fadein 7s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*----------PANTALLA JUEGO---------*/
+
+.pantalla-juego {
+
+    /* TODO ojo cuidao dejar en NONE  */
+    display: none; 
+}
+
+/*----------PANTALLA JUEGO -- IZQUIERDA ---------*/
+.pantalla-juego{
+    margin-top: 50px;
+}
+.left img {
+    width: 100%;
+    padding: 5px 10px 50px 10px;
+}
+
+
+.text-nes-container{
+    font-size: .8em;
+    line-height: 2em;
+    margin: 55px 0;
+}
+
+.title-nes-container{
+    font-size: 1em !important;
+    line-height:.8em;
+}
+.kata{
+    margin-top: -50px;
+    font-size: .6em;
+    font-weight: 100;
+    padding-bottom: 55px;
+}
+
+.a-repositorio{
+    text-align: center;
+    padding-left: 66px;
+}
+
+.ironhack a{
+    color:rgb(45,197,250); /*pequeño robo de identidad corporativa?*/
+    font-variant: small-caps;
+}
+
+.ghost-der {
+    height: 70px;
+    animation: 
+    pulse 3s ease infinite alternate, 
+    nudge 5s linear infinite alternate;
+}
+
+@keyframes nudge {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  
+  50% {
+    transform: translate(150px, 0);
+  }
+  
+  80% {
+    transform: translate(-150px, 0);
+  }
+}
+
+
+/*----------PANTALLA JUEGO -- DERECHA ---------*/
+#canvasGame {
+
+    margin: 0 auto;
+    display: block;
+}
+
+.letter span {
+    font-size: .8em;
+}
+
+span.pixel-letter {
+    font-size: .7em;
+    line-height: .7em;
+}
+
+.inst {
+    color: yellow;
+    font-size: 20px;
+    font-family: monospace;
+    text-align: center;
+}
+
+.marg {
+    margin-top: 40px;
+}
+
+
+/*----------PANTALLAS ESTADO ---------*/
+
+.divCanvas {
+    display: flex;
+    height: 650px;
+    margin: 0 auto;
+    padding: 0 50px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.divCanvas p {
+    margin: auto 0;
+    display:block;
+}
+
+#merluzo {
+    text-align: center;
+    font-size: 50px;
+}
+
+#party {
+    text-align: center;
+    font-size: 40px;
+
+}
+
+#pum {
+    text-align: center;
+    font-size: 50px;
+}
+
+#countdown{
+    display: block;
+}
+
+/*----------OJO CUIDAO: UNA MEDIAQUERY LOCATIS ---------*/
+
+@media (min-width: 992px){
+.col-lg-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 100%;
+}
+}
