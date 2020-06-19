@@ -65,7 +65,7 @@ const german = {
     escarlata: undefined,
 
 
-    sound_pill: new Audio("mp3/eat_ball.mp3"),
+    sound_pill: new Audio("mp3/pacman-waka.mp3"),
     sound_power_pill: new Audio('mp3/powerpill.mp3'),
     sound_die: new Audio('mp3/die.mp3'),
     sound_eatGhost: new Audio('mp3/eatghost.mp3'),
