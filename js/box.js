@@ -14,7 +14,6 @@ class Box {
         ctx.strokeStyle = 'blue';
         ctx.lineWidth = 7;
 
-        //https://developer.mozilla.org/es/docs/Web/Guide/HTML/Canvas_tutorial/Dibujando_formas
         ctx.beginPath();
         ctx.moveTo(x, y + radius);
         ctx.lineTo(x, y + height - radius);
@@ -34,9 +33,8 @@ class Box {
     drawBox(ctx, canvasSize, image) {
 
         if (this.type === ('wall')) {
-            //ctx.fillStyle = 'blue'   PARA QUE SE RELLENE FALTA PONER EL FILL() EN ROUNDRECT
-
-            //ASÍ SE LLAMA AL MÉTODO DE LAS CAJITAS REDONDAS
+            
+        //ASÍ SE LLAMA AL MÉTODO DE LAS CAJITAS REDONDAS. PARA QUE SE RELLENE FALTA PONER EL FILL() EN ROUNDRECT
             this.roundedRect(ctx,
                 this.x * image.w,
                 this.y * image.h,

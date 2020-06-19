@@ -1,0 +1,13 @@
+{
+    "workbench.colorCustomizations": {
+        "[Synthwave x Fluoromachine]": {
+            "titleBar.activeBackground": "#191919cc",
+            "titleBar.activeForeground": "#E4FF00",
+        },
+    },
+    "workbench.iconTheme": "eq-material-theme-icons-light",
+    "workbench.editor.highlightModifiedTabs": true,
+    "window.zoomLevel": 0.3,
+    "workbench.editorAssociations": []
+},
+"window.titleBarStyle": "custom"

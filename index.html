@@ -2,76 +2,85 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GER-MAN</title>
     <!-- NES.CSS -->
-    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
     <!-- BOOSTSTSTSRAP -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
     <!-- FONT press Start 2P  -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
     <!-- CSS PROPIO -->
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-
     <div class="container-fluid vh-100 pantalla-juego">
-        <div class="row ">
-            <div class="col-md-12 col-lg-4 left  text-center">
+        <div class="row">
+            <div class="col-md-12 col-lg-4 left text-center">
                 <div class="row">
                     <div class="container">
                         <div class="col">
-                            <img src="img\logo-izq.png" alt="GER-MAN Logo">
+                            <img src="img\logo-izq-rojo.png" alt="GER-MAN Logo" />
                         </div>
                         <div class="col">
-
                             <div class="with-title is-centered nes-container is-rounded is-dark pixel-letter">
                                 <p class="title title-nes-container">INSTRUCCIONES</p>
-                                <p class="text-nes-container">El objetivo es comerse todas las manzanas para poder
-                                    completar el <strong class="ironhack"> <a target="_blank"
+                                <p class="text-nes-container">
+                                    El objetivo es comerse todas las manzanas para poder
+                                    completar el
+                                    <strong class="ironhack">
+                                        <a target="_blank"
                                             href="https://www.ironhack.com/es/desarrollo-web">Bootcamp</a>
-                                    </strong></p>
-                                <p class="text-nes-container">¡Cuidado con los TA's y tus compañeras!, intentarán
-                                    complicarte el camino</p>
+                                    </strong>
+                                </p>
+                                <p
+                                    class="text-nes-cs.characterPos.x * this.tile.w, //DX coordenada en la que pintamos tile.w, //width que va a tener la imagen cuando la pintemosla imagen container">
+                                    ¡Cuidado con los TA's y tus compañeras!, intentarán
+                                    complicarte el camino
+                                </p>
                                 <p class="text-nes-container">Cada manzana suma 10 puntos</p>
-                                <p class="text-nes-container kata">KATA: Tienes una hora para calcular en qué mes se
-                                    recogieron. Go!</p>
+                                <p class="text-nes-container kata">
+                                    KATA: Tienes una hora para calcular en qué mes se
+                                    recogieron. Go!
+                                </p>
                             </div>
-
                         </div>
-                    </div><!-- END CONTAINER -->
-                </div> <!-- END ROW -->
+                    </div>
+                    <!-- END CONTAINER -->
+                </div>
+                <!-- END ROW -->
                 <div class="row d-flex align-self-baseline">
                     <div class="container">
                         <div class="col-10">
-                            <span class="a-repositorio pixel-letter"><i class="nes-icon github is-small"></i> <a
-                                    target="_blank" href="https://github.com/LuriLurika/Proyect-1">Repositorio
-                                    del juego</a></span>
+                            <span class="a-repositorio pixel-letter"><i class="nes-icon github is-small"></i>
+                                <a target="_blank" href="https://github.com/LuriLurika/Proyect-1">Repositorio del
+                                    juego</a></span>
                         </div>
-                    </div><!-- END CONTAINER -->
-                </div><!-- END CONTAINER -->
-            </div> <!-- END COL.12/4 -->
-
+                    </div>
+                    <!-- END CONTAINER -->
+                </div>
+                <!-- END CONTAINER -->
+            </div>
+            <!-- END COL.12/4 -->
 
             <div class="col-md-12 col-lg-8">
-
                 <div class="row d-flex pixel-letter d-flex">
                     <div class="col-6">SCORE <span id="counter"> 0 </span></div>
 
                     <div class="col-6 d-flex justify-content-end">
                         <i class="nes-icon is-medium heart"></i>
-                        <i class="nes-icon is-medium is-half heart"></i>
-                        <i class="nes-icon is-medium heart is-empty"></i>
+                        <i class="nes-icon is-medium heart"></i>
+                        <i class="nes-icon is-medium heart"></i>
                     </div>
-                </div> <!-- END ROW -->
-
+                </div>
+                <!-- END ROW -->
 
                 <div class="row">
                     <div class="col-12">
-                        <canvas id="canvasGame" style="width: 900px; height: 650px;"> </canvas>
+                        <canvas id="canvasGame" style="width: 900px; height: 650px;">
+                        </canvas>
                         <div id="party" class="blink divCanvas">
                             <div class="container">
                                 <div class="row">
@@ -87,48 +96,78 @@
                             </div>
                         </div>
 
-
                         <div id="merluzo" class="divCanvas">
                             <p class="text-center letter">HAS PERDIDO... merluzo!</p>
                             <!-- la ! no sale porque no es una americanada =(  -->
                         </div>
 
-
                         <div id="pum" class="divCanvas">
                             <p class="text-center letter">pum!!... IN YOUR FACE!</p>
                         </div>
 
+                        <div id="waiting" class="divCanvas">
+                            <img src="img/ger-1.png" alt="Ger-1">
+                        </div>
+                        <!-- TODO revisar Waiting -->
+
+                        <div id="no-game" class="divCanvas">
+                            <img src="img/ger-3.png" alt="Ger-3">
+                        </div>
 
                         <!-- party antes de empezar, merluzo gameover, pum in your face win win -->
                         <!-- party antes de empezar, merluzo gameover, pum in your face win win -->
+
+                        <!-- DIÁLOGO PARA VOLVER A EMPEZAR -->
+
+                        <div class="row show-again">
+                            <div class="col">
+                                <div class="nes-container is-dark with-title">
+                                    <p class="title pixel-letter">Play again?</p>
+                                    <div style="background-color:#212529; padding: 1rem 0;">
+                                        <label>
+                                            <input onclick="checkRadioYes()" type="radio" class="nes-radio is-dark"
+                                                name="answer-dark" />
+                                            <span class="radio-play">Yes</span>
+                                        </label>
+
+                                        <label>
+                                            <input onclick="checkRadioNo()" type="radio" class="nes-radio is-dark"
+                                                name="answer-dark" />
+                                            <span class="radio-play">No</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                </div><!-- END ROW -->
+                </div>
+                <!-- END ROW -->
 
                 <div class="row pixel-letter">
                     <div class="col-6">
-                        <p class="d-flex justify-content-around">
-
+                        <p class="d-flex justify-content-around margin-top-countdown2">
                             <img class="ghost-der" src="img/ghosts_der.png"
-                                alt="Reinterpretación de los ghosts del pacman">
+                                alt="Reinterpretación de los ghosts del pacman" />
                         </p>
                     </div>
                     <div class="col-6">
-                        <p class="d-flex justify-content-around">FOTO GERMAN</p>
+                        <p class="d-flex justify-content-around" id="countdown2">
+                            <img class="ghost-der" src="img/ger-2.png" alt="Ilustración Germán" />
+                        </p>
                     </div>
-                </div><!-- END ROW -->
-
-            </div><!-- END COL.12/8 -->
-
-        </div> <!-- END ROW -->
-
-    </div> <!-- END CONTAINER FLUID PANTALLA JUEGO-->
-
-
+                </div>
+                <!-- END ROW -->
+            </div>
+            <!-- END COL.12/8 -->
+        </div>
+        <!-- END ROW -->
+    </div>
+    <!-- END CONTAINER FLUID PANTALLA JUEGO-->
 
     <div class="container-fluid vh-100 pantalla-inicio d-flex justify-content-center">
-        <div class="row d-flex align-self-center ">
-            <div class="text-center col ">
-
+        <div class="row d-flex align-self-center">
+            <div class="text-center col">
                 <div class="svg">
                     <svg viewBox="0 0 1148.6 240.22" xmlns="http://www.w3.org/2000/svg">
                         <title>Ger·Man</title>
@@ -148,23 +187,19 @@
                                 d="m978.52 210.36q-93.35-16.94-187.73-26.22 57.81-80.26 121.36-156c13.75 29.4 25.11 59.88 35.72 90.48 10.54 30.38 20.38 61.18 30.65 91.74zm-4.14-4c-9-29.35-19.13-58.4-29.38-87.34s-21.26-58-33.49-86.39q-61.57 73-117.81 150.14c20.29 1.81 40.57 4.17 60.71 6.77s40.29 5.51 60.38 8.41c19.82 2.9 39.71 5.76 59.59 8.44zm-4.67-3.16q-84.13-14.85-169.05-23.59 52.62-71.86 109.87-140c22.05 53.64 42.58 108.01 59.18 163.62zm-8.13-7.71c-5.26-15.85-11.14-31.49-17-47.11l-4.34 1.42c0.7 4 2.8 10.82 6.18 20.38 3 8.41 4.59 15 4.88 19.66q-14.75-1.63-29.51-3c-0.22 1.46-0.34 2.18-0.57 3.64 0.83 0.13 7.55 1.18 20.05 3.4 8.13 1.44 14.93 2.03 20.31 1.64z" />
                             <path transform="translate(-19.61 -2.73)"
                                 d="m1124.8 243q-70.72-18-142.36-31.56 15.53-83.44 31.1-166.86 35.34 52.74 67.92 107.18c4.57-15.29 8.64-30.75 12.58-46.18s7.8-31.17 12-46.68q31.17 7.18 62.17 15.06-21.71 84.49-43.41 169.04zm-0.12-2.38q21-81.87 42-163.74-29.76-7.56-59.66-14.47-11.7 47.37-23.36 94.74c-12.14-17.42-23.41-35.5-34.69-53.43s-23-35.95-34.66-53.78q-14.93 79.8-29.86 159.61 70.59 13.38 140.23 31.02zm-1.29-4.31q-67.23-16.62-135.24-29.31 14-73.94 27.89-147.86 17.43 26.39 34.17 53.21c11.16 17.91 22.29 35.85 33.88 53.49 5.34-16.34 9.32-33.1 13.14-49.82s7.44-33.68 12.32-50.19q26.6 6.2 53.07 12.87-19.59 78.79-39.23 157.56zm-7.66-12q6.67-28.12 13.32-56.26l-3.21-0.8c-4.56 16.82-10.11 33.38-15.54 49.93q-21.22-4.28-42.5-8.25l-0.85 3.76q24.47 5.45 48.78 11.52z" />
-
                         </g>
                     </svg>
                 </div>
 
-
-
-
-                <button class=" nes-btn is-error text-center blink pixel-letter" onclick="startGame()">START</button>
-
-
-
+                <button class="nes-btn is-error text-center blink pixel-letter" onclick="startGame()">
+                    START
+                </button>
             </div>
         </div>
-    </div> <!-- END CONTAINER FLUID PANTALLA INICIO-->
+    </div>
+    <!-- END CONTAINER FLUID PANTALLA INICIO-->
 
-    <div class="container-fluid vh-100 w-100 pantalla-carga  align-content-center" style="display:none">
+    <div class="container-fluid vh-100 w-100 pantalla-carga align-content-center" style="display: none;">
         <div class="row">
             <div class="col-12 d-flex flex-row text-center svg-container">
                 <svg id="logo-juego" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 478.21 100.04">
@@ -188,12 +223,9 @@
                         </g>
                     </g>
                 </svg>
-
-
             </div>
-
-        </div><!-- END ROW-->
-
+        </div>
+        <!-- END ROW-->
 
         <div class="row">
             <div class="text-center col-12 show-names">
@@ -201,21 +233,21 @@
                 <p class="pixel-letter">[...this.originalGame]</p>
                 <p class="pixel-letter">BY</p>
 
-                <p class="letter ">Laura<span class="pixel-letter "> & </span>Scarl</p>
+                <p class="letter">Laura<span class="pixel-letter"> & </span>Scarl</p>
 
-                <p class="letter ">1222222222222222222222222229</p>
+                <p class="letter">1222222222222222222222222229</p>
             </div>
-        </div><!-- END ROW -->
+        </div>
+        <!-- END ROW -->
 
 
 
-    </div> <!-- END CONTAINER FLUID PANTALLA CARGA-->
+    </div>
+    <!-- END CONTAINER FLUID PANTALLA CARGA-->
 
     <!-- VIVUS CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.3.2/vivus.js"></script>
 
-
-    <script src="js/pantallas.js"></script>
     <script src="js/dayan_path.js"></script>
     <script src="js/kike_path.js"></script>
     <script src="js/laura_path.js"></script>
@@ -225,7 +257,7 @@
     <script src="js/character.js"></script>
     <script src="js/game.js"></script>
     <script src="js/script.js"></script>
-
+    <script src="js/pantallas.js"></script>
 </body>
 
 </html>

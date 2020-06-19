@@ -99,65 +99,71 @@ svg {
 .pantalla-juego {
 
     /* TODO ojo cuidao dejar en NONE  */
-    display: none; 
+    display: none;
 }
 
 /*----------PANTALLA JUEGO -- IZQUIERDA ---------*/
-.pantalla-juego{
+.pantalla-juego {
     margin-top: 50px;
 }
+
 .left img {
     width: 100%;
     padding: 5px 10px 50px 10px;
 }
 
 
-.text-nes-container{
+.text-nes-container {
     font-size: .8em;
     line-height: 2em;
     margin: 55px 0;
 }
 
-.title-nes-container{
+.title-nes-container {
     font-size: 1em !important;
-    line-height:.8em;
+    line-height: .8em;
 }
-.kata{
+
+.kata {
     margin-top: -50px;
     font-size: .6em;
     font-weight: 100;
     padding-bottom: 55px;
+    opacity: .6;
 }
 
-.a-repositorio{
+.a-repositorio {
     text-align: center;
     padding-left: 66px;
 }
 
-.ironhack a{
-    color:rgb(45,197,250); /*pequeño robo de identidad corporativa?*/
+.ironhack a {
+    color: rgb(45, 197, 250);
+    /*pequeño robo de identidad corporativa?*/
     font-variant: small-caps;
 }
 
 .ghost-der {
     height: 70px;
-    animation: 
-    pulse 3s ease infinite alternate, 
-    nudge 5s linear infinite alternate;
+    animation:
+        pulse 3s ease infinite alternate,
+        nudge 5s linear infinite alternate;
 }
 
 @keyframes nudge {
-  0%, 100% {
-    transform: translate(0, 0);
-  }
-  
-  50% {
-    transform: translate(150px, 0);
-  }
-  
-  80% {
-    transform: translate(-150px, 0);
-  }
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(150px, 0);
+    }
+
+    80% {
+        transform: translate(-150px, 0);
+    }
 }
 
 
@@ -176,23 +182,21 @@ span.pixel-letter {
     font-size: .7em;
     line-height: .7em;
 }
-
-.inst {
-    color: yellow;
-    font-size: 20px;
-    font-family: monospace;
-    text-align: center;
+.margin-top-countdown2{
+    padding-top: 40px;
+    font-size: 30px;
 }
 
-.marg {
-    margin-top: 40px;
+#countdown2 {
+    padding-top: 40px;
+    font-size: 30px;
 }
 
 
 /*----------PANTALLAS ESTADO ---------*/
 
 .divCanvas {
-    display: none;
+
     height: 650px;
     margin: 0 auto;
     padding: 0 50px;
@@ -203,35 +207,72 @@ span.pixel-letter {
 
 .divCanvas p {
     margin: auto 0;
-    display:block;
+    display: block;
 }
 
 #merluzo {
     text-align: center;
     font-size: 50px;
+    display: none;
 }
 
 #party {
     text-align: center;
     font-size: 40px;
+    display: none;
 
 }
 
 #pum {
     text-align: center;
     font-size: 50px;
+    display: none;
 }
 
-#countdown{
+#countdown {
     display: block;
 }
 
+.radio-play{
+    /*accesibilidad cero, verdad?*/
+    cursor:pointer !important;
+}
+
+#waiting{
+    display: none;
+    width:100%;
+    height: 100%;
+    margin: 0 auto;
+    align-items: center;
+    align-content: center;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#no-game{
+    display: none;
+    width:100%;
+    height: 100%;
+    margin: 0 auto;
+    align-items: center;
+    align-content: center;
+    border-radius: 50%;
+    background-color: white;
+}
+
+
+.show-again {
+    display:none;
+}
+
+
+
 /*----------OJO CUIDAO: UNA MEDIAQUERY LOCATIS ---------*/
 
-@media (min-width: 992px){
-.col-lg-4 {
-    -ms-flex: 0 0 33.333333%;
-    flex: 0 0 33.333333%;
-    max-width: 100%;
-}
+@media (min-width: 992px) {
+    .col-lg-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 100%;
+    }
 }
