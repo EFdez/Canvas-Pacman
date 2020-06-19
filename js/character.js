@@ -16,7 +16,7 @@ class Character {
         }
 
         this.image = new Image()
-        this.image.src = `/img/${name}`
+        this.image.src = `./img/${name}`
         this.image.frames = 3
         this.image.framesIndex = 0
 
@@ -54,16 +54,16 @@ class Character {
         this.ctx.translate(translation.x, translation.y);
 
         // rotate the canvas to the specified degrees
-        this.ctx.rotate(translation.angle * Math.PI / 180) 
-            if (this.direction === "left") {
-                this.image.src = `/img/german-sprites-izq.png`
-            } else {
-                this.image.src = `/img/pacman.png`
-            }
-        
-        
-        
-        
+        this.ctx.rotate(translation.angle * Math.PI / 180)
+        if (this.direction === "left") {
+            this.image.src = `./img/german-sprites-izq.png`
+        } else {
+            this.image.src = `./img/pacman.png`
+        }
+
+
+
+
 
         // we’re done with the rotating so restore the unrotated context
 
@@ -85,34 +85,34 @@ class Character {
     }
 
 
-     calculateTranslation() {
-         let result = {}
-         switch (this.direction) {
-             case "up":
-                 result.x = (this.characterPos.x + 0) * this.tile.w
-                 result.y = (this.characterPos.y + 1) * this.tile.h
-                 result.angle = -90
-                 break;
-             case "down":
-                 result.x = (this.characterPos.x + 1) * this.tile.w
-                 result.y = (this.characterPos.y + 0) * this.tile.h
-                 result.angle = 90
-                 break;
-             case "left":
-                 result.x = (this.characterPos.x ) * this.tile.w
-                 result.y = (this.characterPos.y ) * this.tile.h
-                 result.angle = 0
-                 break;
-             default:
-                 result.x = this.characterPos.x * this.tile.w
-                 result.y = this.characterPos.y * this.tile.h
-                 result.angle = 0
-                 break;
-         }
-         return result
-     }
-    
-    
+    calculateTranslation() {
+        let result = {}
+        switch (this.direction) {
+            case "up":
+                result.x = (this.characterPos.x + 0) * this.tile.w
+                result.y = (this.characterPos.y + 1) * this.tile.h
+                result.angle = -90
+                break;
+            case "down":
+                result.x = (this.characterPos.x + 1) * this.tile.w
+                result.y = (this.characterPos.y + 0) * this.tile.h
+                result.angle = 90
+                break;
+            case "left":
+                result.x = (this.characterPos.x) * this.tile.w
+                result.y = (this.characterPos.y) * this.tile.h
+                result.angle = 0
+                break;
+            default:
+                result.x = this.characterPos.x * this.tile.w
+                result.y = this.characterPos.y * this.tile.h
+                result.angle = 0
+                break;
+        }
+        return result
+    }
+
+
 
 
     animate(framesCounter) {
@@ -148,8 +148,8 @@ class Character {
                 break;
         }
         if (arrayWall.filter(elm =>
-                elm.x === nextMovement.x && elm.y === nextMovement.y
-            ).length > 0) {} else {
+            elm.x === nextMovement.x && elm.y === nextMovement.y
+        ).length > 0) { } else {
             this.characterPos = nextMovement
             this.moveTunel()
             this.onNewMovement(nextMovement)
