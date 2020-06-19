@@ -14,16 +14,19 @@ function showPlayAgain() {
 }
 
 function checkRadioYes() {
+    document.getElementById('canvasGame').style.display = 'block'
     document.querySelector('.show-again').style.display = 'none'
-    document.getElementById('pum').style.display = 'flex'
-    german.reset()
+
+    document.getElementById('pum').style.display = 'none'
+    setTimeout(() => {
+        german.start()
+    }, 500);
+
     console.log("YES")
 }
 function checkRadioNo() {
     document.getElementById('canvasGame').style.display = 'none'
-    document.getElementById('no-game').style.display = 'block'
     document.querySelector('.show-again').style.display = 'none'
-    //TODO HACER QUE EL JUEGO PARE
     console.log("NO")
 }
 

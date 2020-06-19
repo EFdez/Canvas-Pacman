@@ -339,7 +339,7 @@ const german = {
                 setTimeout(function () {
                     document.getElementById("merluzo").style.display = 'none'
                     document.getElementById("canvasGame").style.display = 'block'
-                }, 3000)
+                }, 1000)
             }
     },
 
