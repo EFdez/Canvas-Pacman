@@ -165,7 +165,7 @@ const german = {
                 return elm.x !== appleEaten.x || elm.y !== appleEaten.y
             })
 
-            this.sound_pill.volume = .03
+            this.sound_pill.volume = .5
             this.sound_pill.play()
 
             // SUMAR 10 PUNTOS POR CADA MANZANA
@@ -185,7 +185,7 @@ const german = {
             this.updateScore()
             this.setterStatus('super')
             this.chronometer()
-            this.sound_power_pill.volume = .03
+            this.sound_power_pill.volume = .5
             this.sound_power_pill.play()
 
         })
@@ -305,28 +305,28 @@ const german = {
                     this.score += 100
                     this.updateScore()
                     this.dayan.reset()
-                    this.sound_eatGhost.volume = .03
+                    this.sound_eatGhost.volume = .5
                     this.sound_eatGhost.play()
                 }
                 if ((this.pacman.characterPos.x === this.kike.getCurrentPosition().x) && (this.pacman.characterPos.y === this.kike.getCurrentPosition().y)) {
                     this.score += 100
                     this.updateScore()
                     this.kike.reset()
-                    this.sound_eatGhost.volume = .03
+                    this.sound_eatGhost.volume = .5
                     this.sound_eatGhost.play()
                 }
                 if ((this.pacman.characterPos.x === this.laura.getCurrentPosition().x) && (this.pacman.characterPos.y === this.laura.getCurrentPosition().y)) {
                     this.score += 100
                     this.updateScore()
                     this.laura.reset()
-                    this.sound_eatGhost.volume = .03
+                    this.sound_eatGhost.volume = .5
                     this.sound_eatGhost.play()
                 }
                 if ((this.pacman.characterPos.x === this.escarlata.getCurrentPosition().x) && (this.pacman.characterPos.y === this.escarlata.getCurrentPosition().y)) {
                     this.score += 100
                     this.updateScore()
                     this.escarlata.reset()
-                    this.sound_eatGhost.volume = .03
+                    this.sound_eatGhost.volume = .5
                     this.sound_eatGhost.play()
                 }
 
@@ -334,7 +334,7 @@ const german = {
                 this.gameOver()
                 document.getElementById("merluzo").style.display = 'flex'
                 document.getElementById("canvasGame").style.display = 'none'
-                this.sound_die.volume = .03
+                this.sound_die.volume = .5
                 this.sound_die.play()
                 setTimeout(function () {
                     document.getElementById("merluzo").style.display = 'none'

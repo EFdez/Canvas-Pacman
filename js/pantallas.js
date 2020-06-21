@@ -34,7 +34,7 @@ function checkRadioNo() {
 function startGame() {
 
     let theme = new Audio('mp3/theme.mp3')
-    theme.volume = .03
+    theme.volume = .5
     theme.play()
     //Y la pantalla de carga aparece
     pantallaCarga.style.display = 'block'
